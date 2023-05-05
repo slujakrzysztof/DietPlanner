@@ -1,7 +1,6 @@
 package com.sluja.dietplanner.entity;
 
 import com.sluja.dietplanner.enums.Category;
-import com.sluja.dietplanner.enums.Ingredients;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;

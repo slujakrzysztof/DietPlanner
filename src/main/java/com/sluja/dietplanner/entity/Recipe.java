@@ -2,7 +2,6 @@ package com.sluja.dietplanner.entity;
 
 import com.sluja.dietplanner.enums.CookingTime;
 import com.sluja.dietplanner.enums.PreparingLevel;
-import com.sluja.dietplanner.enums.CuisineType;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
