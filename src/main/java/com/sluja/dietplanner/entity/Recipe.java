@@ -1,5 +1,6 @@
 package com.sluja.dietplanner.entity;
 
+import com.sluja.dietplanner.enums.CookingTime;
 import com.sluja.dietplanner.enums.PreparingLevel;
 import com.sluja.dietplanner.enums.CuisineType;
 import jakarta.persistence.*;
@@ -36,5 +37,16 @@ public class Recipe {
 
     @Column
     private Long kcal;
+
+    @Column
+    private String instruction;
+
+    @Column
+    private String name;
+
+    @Column
+    private String image;
+
+
 
 }

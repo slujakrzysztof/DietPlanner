@@ -16,7 +16,7 @@ public class Ingredient {
     private int id;
 
     @Column(name = "name")
-    private Ingredients name;
+    private String name;
 
     @Column(name = "price")
     private BigDecimal price;
