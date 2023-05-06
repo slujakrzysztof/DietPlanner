@@ -14,12 +14,11 @@ public class Recipe {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column
+    @JoinColumn(name = "ingredient_id")
     @ManyToMany
     private List<Ingredient> ingredient;
 
     @Column
-    @ManyToOne
     private CookingTime cookingTime;
 
     @Column
@@ -31,11 +30,9 @@ public class Recipe {
     @Column
     private PreparingLevel preparingLevel;
 
-    @Column
+    @ManyToOne
+    @JoinColumn(name = "cuisine_type_id")
     private CuisineType cuisineType;
-
-    @Column
-    private Long kcal;
 
     @Column
     private String instruction;

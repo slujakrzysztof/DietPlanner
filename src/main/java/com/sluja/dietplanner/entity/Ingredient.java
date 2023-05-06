@@ -23,7 +23,7 @@ public class Ingredient {
     @Column(name = "category")
     private Category category;
 
-    @Column
+    @JoinColumn(name = "recipe_id")
     @ManyToMany
     private List<Recipe> recipe;
 }
