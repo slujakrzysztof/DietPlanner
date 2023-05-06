@@ -1,9 +1,6 @@
 package com.sluja.dietplanner.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "blacklist")
@@ -13,6 +10,7 @@ public class BlackList {
     @Column
     private int id;
 
-    @Column
+    @OneToOne
+    @JoinColumn(name = "recipe_id")
     private Recipe recipe;
 }
