@@ -3,9 +3,11 @@ package com.sluja.dietplanner.entity;
 import com.sluja.dietplanner.enums.CookingTime;
 import com.sluja.dietplanner.enums.PreparingLevel;
 import jakarta.persistence.*;
+import lombok.Getter;
 
 @Entity
 @Table(name = "shortRecipe")
+@Getter
 public class ShortRecipe {
 
     @Id

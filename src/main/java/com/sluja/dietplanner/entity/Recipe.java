@@ -1,14 +1,17 @@
 package com.sluja.dietplanner.entity;
 
+import com.sluja.dietplanner.enums.Category;
 import com.sluja.dietplanner.enums.CookingTime;
 import com.sluja.dietplanner.enums.PreparingLevel;
 import jakarta.persistence.*;
+import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
 @Table(name = "recipe")
+@Getter
 public class Recipe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -43,6 +46,8 @@ public class Recipe {
     @Column
     private String image;
 
+    @Column(name = "category")
+    private Category category;
 
 
 }

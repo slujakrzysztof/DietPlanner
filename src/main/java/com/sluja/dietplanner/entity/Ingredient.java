@@ -20,9 +20,6 @@ public class Ingredient {
     @Column(name = "price")
     private BigDecimal price;
 
-    @Column(name = "category")
-    private Category category;
-
     @JoinColumn(name = "recipe_id")
     @ManyToMany
     private List<Recipe> recipe;
