@@ -6,6 +6,7 @@ import com.sluja.dietplanner.enums.PreparingLevel;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
 @Entity
 @Table(name = "recipe")
 @Getter
+@Setter
 public class Recipe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -53,6 +55,9 @@ public class Recipe {
 
     @Column(name = "category")
     private Category category;
+
+    @Column
+    private boolean favourite;
 
 
 }

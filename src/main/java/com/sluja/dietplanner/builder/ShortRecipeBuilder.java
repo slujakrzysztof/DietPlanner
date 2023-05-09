@@ -11,7 +11,7 @@ public class ShortRecipeBuilder implements Function<ShortRecipe, ShortRecipeDTO>
 
         return ShortRecipeDTO.builder()
                              .name(shortRecipe.getName())
-                             .favourite(shortRecipe.isFavourite())
+                             .favourite(shortRecipe.getRecipe().isFavourite())
                              .preparingLevel(shortRecipe.getPreparingLevel())
                              .category(shortRecipe.getRecipe().getCategory())
                              .build();

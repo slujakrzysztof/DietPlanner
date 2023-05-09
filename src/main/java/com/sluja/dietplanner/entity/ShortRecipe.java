@@ -31,6 +31,4 @@ public class ShortRecipe {
     @OneToOne
     private Recipe recipe;
 
-    @Column
-    private boolean favourite;
 }
