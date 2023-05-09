@@ -3,6 +3,7 @@ package com.sluja.dietplanner.entity;
 import com.sluja.dietplanner.enums.Category;
 import com.sluja.dietplanner.enums.CookingTime;
 import com.sluja.dietplanner.enums.PreparingLevel;
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.Getter;
 
@@ -19,15 +20,18 @@ public class Recipe {
 
     @JoinColumn(name = "ingredient_id")
     @ManyToMany
+    @Nullable
     private List<Ingredient> ingredient;
 
     @Column
     private CookingTime cookingTime;
 
     @Column
+    @Nullable
     private String description;
 
     @Column
+    @Nullable
     private BigDecimal totalPrice;
 
     @Column
@@ -44,6 +48,7 @@ public class Recipe {
     private String name;
 
     @Column
+    @Nullable
     private String image;
 
     @Column(name = "category")
