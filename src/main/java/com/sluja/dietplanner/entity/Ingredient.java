@@ -2,12 +2,14 @@ package com.sluja.dietplanner.entity;
 
 import com.sluja.dietplanner.enums.Category;
 import jakarta.persistence.*;
+import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
 @Table(name = "ingredient")
+@Getter
 public class Ingredient {
 
     @Id
@@ -20,7 +22,7 @@ public class Ingredient {
     @Column(name = "price")
     private BigDecimal price;
 
-    @JoinColumn(name = "recipe_id")
-    @ManyToMany
-    private List<Recipe> recipe;
+    @Column
+    private String amount;
+
 }
